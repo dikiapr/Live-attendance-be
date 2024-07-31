@@ -13,6 +13,7 @@ const create = async (request) => {
     data: {
       ...attendance,
       photo: photoUrl, // Save the photo URL
+      location: attendance.location, // Save the location
     },
     select: {
       id: true,
@@ -25,6 +26,7 @@ const create = async (request) => {
         },
       },
       photo: true, // Include photo in the response
+      location: true, // Include location in the response
     },
   });
 };
@@ -42,6 +44,7 @@ const get = async () => {
         },
       },
       photo: true, // Include photo in the response
+      location: true, // Include location in the response
     },
   });
 };
@@ -61,6 +64,7 @@ const checkoutEmployee = async (id) => {
         },
       },
       photo: true, // Include photo in the response
+      location: true, // Include location in the response
     },
   });
 };

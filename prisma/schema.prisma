@@ -31,4 +31,5 @@ model AttendanceList {
   checkOut     DateTime?  
   employee     Employee @relation(fields: [employeeId], references: [id])
   photo        String
+  location     String
 }
